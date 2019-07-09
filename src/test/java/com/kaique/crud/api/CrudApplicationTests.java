@@ -1,4 +1,4 @@
-package com.kazale.crud.api;
+package com.kaique.crud.api;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
