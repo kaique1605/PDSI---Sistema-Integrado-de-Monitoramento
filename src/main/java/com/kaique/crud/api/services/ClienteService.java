@@ -9,7 +9,7 @@ public interface ClienteService {
 	
 	List<Cliente> listarTodos();
 	
-	Optional<Cliente> listarPorId(String id);
+	Cliente listarPorId(String id);
 	
 	Cliente cadastrar(Cliente cliente);
 	

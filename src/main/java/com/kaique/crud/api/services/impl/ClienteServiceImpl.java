@@ -12,7 +12,7 @@ import com.kaique.crud.api.services.ClienteService;
 
 @Service
 public class ClienteServiceImpl implements ClienteService {
-	
+
 	@Autowired
 	private ClienteRepository clienteRespository;
 
@@ -22,8 +22,8 @@ public class ClienteServiceImpl implements ClienteService {
 	}
 
 	@Override
-	public Optional<Cliente> listarPorId(String id) {
-		return this.clienteRespository.findById(id);
+	public Cliente listarPorId(String id) {
+		return this.clienteRespository.findOne(id);
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public class ClienteServiceImpl implements ClienteService {
 
 	@Override
 	public void remover(String id) {
-		this.clienteRespository.deleteById(id);
+		this.clienteRespository.delete(id);
 	}
 
 }

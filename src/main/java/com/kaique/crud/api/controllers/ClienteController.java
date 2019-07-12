@@ -35,8 +35,8 @@ public class ClienteController {
 	}
 	
 	@GetMapping(path = "/{id}")
-	public Optional<Cliente> listarPorId(@PathVariable(name = "id") String id) {
-		return this.clienteService.listarPorId(id);
+	public ResponseEntity<Response<Cliente>> listarPorId(@PathVariable(name = "id") String id) {
+		return ResponseEntity.ok(new Response<Cliente>(this.clienteService.listarPorId(id)));
 	}
 	
 	@PostMapping
@@ -67,5 +67,4 @@ public class ClienteController {
 		this.clienteService.remover(id);
 		return ResponseEntity.ok(new Response<Integer>(1));
 	}
-
 }
